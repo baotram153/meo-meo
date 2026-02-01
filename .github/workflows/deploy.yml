@@ -20,6 +20,12 @@ jobs:
 
       - run: npm install
       - run: npm run build
+      
+      - run: echo "=== LIST ROOT ==="
+      - run: ls -la
+
+      - run: echo "=== LIST DIST ==="
+      - run: ls -la dist
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
